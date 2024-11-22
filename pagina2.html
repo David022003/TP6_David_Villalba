@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página Principal</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        button {
+            margin: 10px;
+            padding: 15px 30px;
+            font-size: 16px;
+            border: none;
+            border-radius: 5px;
+            cursor: pointer;
+            transition: background-color 0.3s, transform 0.3s;
+        }
+        button:hover {
+            background-color: #007BFF;
+            color: white;
+            transform: scale(1.05);
+        }
+    </style>
+</head>
+<body>
+    <h1>Página Principal</h1>
+    <p id="welcomeMessage"></p>
+
+    <label for="username">Por favor, ingresa tu nombre:</label>
+    <input type="text" id="username" placeholder="Tu nombre" />
+    <button onclick="setUsername()">Enviar</button>
+
+    <h2>Descripción de las páginas:</h2>
+    <p>Página 3: Contenido interesante sobre temas diversos.</p>
+    <p>Página 4: Recursos y enlaces útiles para exploración.</p>
+
+    <br>
+    <button onclick="goToPagina3()">Ir a Página 3</button>
+    <button onclick="goToPagina4()">Ir a Página 4</button>
+
+    <script>
+        function setUsername() {
+            var username = document.getElementById("username").value;
+            if (username) {
+                document.getElementById("welcomeMessage").innerText = "¡Bienvenido, " + username + "!";
+            } else {
+                alert("Por favor, ingresa tu nombre.");
+            }
+        }
+
+        function goToPagina3() {
+            // Redireccionar a página 3
+            window.location.href = "pagina3.html";
+        }
+
+        function goToPagina4() {
+            // Redireccionar a página 4
+            window.location.href = "pagina4.html";
+        }
+    </script>
+</body>
+</html>

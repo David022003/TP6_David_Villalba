@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página 4</title>
+</head>
+<body>
+
+    <h1>Enviar Mensaje</h1>
+    
+    <form id="messageForm" onsubmit="sendMessage(event)">
+        <input type="text" placeholder="Nombre" id="msgName" required>
+        <input type="text" placeholder="Apellido" id="msgSurname" required>
+        <input type="tel" placeholder="Celular" id="msgPhone" required>
+        <input type="email" placeholder="Email" id="msgEmail" required>
+        <textarea placeholder="Mensaje" id="longMessage" required></textarea>
+        <button type="submit">Enviar Mensaje</button>
+        <button type="button" onclick="clearMessageForm()">Limpiar</button>
+    </form>
+    
+    <p id="messageResult"></p>
+
+    <!-- Botones de navegación a otras páginas -->
+    <nav>
+        <button onclick="location.href='pagina1.html'">Página 1</button>
+        <button onclick="location.href='pagina2.html'">Página 2</button>
+        <button onclick="location.href='pagina3.html'">Página 3</button>
+        <button onclick="location.href='pagina5.html'">Página 5</button>
+    </nav>
+
+    <script src="script.js"></script>
+    <script>
+        function sendMessage(event) {
+            event.preventDefault(); // Evita el envío del formulario
+
+            // Obtiene los valores de los campos del formulario
+            const name = document.getElementById('msgName').value;
+            const surname = document.getElementById('msgSurname').value;
+            const phone = document.getElementById('msgPhone').value;
+            const email = document.getElementById('msgEmail').value;
+            const message = document.getElementById('longMessage').value;
+
+            // Muestra un mensaje de éxito usando alert()
+            alert(`Mensaje enviado por ${name} ${surname}.\nCelular: ${phone}\nEmail: ${email}\nContenido: ${message}`);
+
+            // Limpiar el formulario después de enviar
+            clearMessageForm();
+        }
+
+        function clearMessageForm() {
+            document.getElementById('messageForm').reset(); // Limpia el formulario
+            document.getElementById('messageResult').innerText = ''; // Limpia el mensaje de resultado
+        }
+    </script>
+
+</body>
+</html>

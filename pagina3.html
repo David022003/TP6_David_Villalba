@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Página 3</title>
+</head>
+<body>
+    <h1>Página de Formulario</h1>
+    <form id="form" onsubmit="sendForm(event)">
+        <input type="text" placeholder="Nombre" id="name" required>
+        <input type="text" placeholder="Apellido" id="surname" required>
+        <input type="number" placeholder="Edad" id="age" required>
+        <input type="text" placeholder="Dirección" id="address" required>
+        <input type="tel" placeholder="Celular" id="phone" required>
+        <input type="email" placeholder="Email" id="email" required>
+        <input type="text" placeholder="Ciudad" id="city" required>
+        <input type="text" placeholder="País" id="country" required>
+        <button type="submit">Enviar</button>
+        <button type="button" onclick="clearForm()">Limpiar</button>
+    </form>
+    <p id="formMessage"></p>
+    
+    <script src="script.js"></script>
+</body>
+</html>

@@ -1,0 +1,55 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 20px;
+    background-color: #f4f4f4; /* Color de fondo suave */
+    color: #333; /* Color de texto predeterminado */
+}
+
+h1 {
+    color: #2c3e50;
+    text-align: center; /* Centrar el título */
+    margin-bottom: 20px; /* Espacio debajo del título */
+}
+
+input, button {
+    margin: 5px;
+    padding: 10px;
+    border: none;
+    border-radius: 5px; /* Esquinas redondeadas */
+}
+
+/* Estilo específico para el campo de entrada */
+input[type="password"] {
+    width: 250px; /* Anchura fija del campo de entrada */
+    border: 1px solid #2c3e50; /* Borde del campo */
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.2); /* Sombra */
+    transition: border-color 0.3s; /* Transición suave para el borde */
+}
+
+input[type="password"]:focus {
+    border-color: #2980b9; /* Color del borde al enfocar */
+    outline: none; /* Quitar el borde de enfoque por defecto */
+}
+
+button {
+    background-color: #2980b9; /* Color de fondo del botón */
+    color: #fff; /* Color del texto del botón */
+    cursor: pointer; /* Cambia el cursor al pasar por encima */
+    font-weight: bold; /* Texto en negrita */
+    transition: background-color 0.3s; /* Transición suave para el fondo */
+}
+
+/* Efecto al pasar el cursor sobre el botón */
+button:hover {
+    background-color: #3498db; /* Color de fondo al pasar el cursor */
+}
+
+#message {
+    text-align: center; /* Centrar el mensaje */
+    margin-top: 20px; /* Espacio encima del mensaje */
+    color: red; /* Color del mensaje de error */
+}
+
+
+
+
